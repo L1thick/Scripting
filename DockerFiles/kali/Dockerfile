@@ -1,4 +1,4 @@
-# Get Kali and install
+# Get Kali and install updates
 FROM kalilinux/kali-rolling
 RUN apt-get update && apt-get upgrade -y
 
@@ -25,5 +25,9 @@ RUN apt-get install -y \
     neofetch \
     htop
 
-# Set the default command to start an interactive bash shell
+# Add the rockyou.txt wordlist
+RUN apt-get install -y wordlists && \
+    gunzip /usr/share/wordlists/rockyou.txt.gz
+
+# Set the default command
 CMD ["/bin/bash"]
