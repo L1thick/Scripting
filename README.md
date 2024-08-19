@@ -1,2 +1,4 @@
-# Scripting
- Directory of random scripts and projects. 
+Projects by folder:
+
+## TO DO:
+##  1. Update me.
